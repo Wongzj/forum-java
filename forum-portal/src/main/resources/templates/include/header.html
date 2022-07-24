@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head th:fragment="head(title, links, scripts)">
-    <title th:replace="${title}" th:text="${globalConfig.websiteName}">开发者客栈</title>
+    <title th:replace="${title}" th:text="${globalConfig.websiteName}">Pet Kingdom</title>
     <meta name="baidu-site-verification" content="code-x9mzArq1EX" />
     <!-- Required meta tags -->
-    <meta name="keywords" content="开发者客栈，开发者社区，开源社区，spring boot开源社区，Java开源社区，社区文章，社区问答" />
-    <meta name="description" content="开发者客栈是基于spring boot开发的一套Java版开源社区，提供写文章，提问题等功能，也可以帮助开发者免费部署供个人学习使用，商业用途需收费。" />
+    <meta name="keywords" content="Pet Kingdom" />
+    <meta name="description" content="Pet Kingdom provide communities for pet socializing, pet training, pet grooming, pet raising experience, missing pet handling in a specific area, pet science, etc." />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <link rel="icon" th:href="${globalConfig.websiteFaviconIconUrl}" href="https://static.developers.pub/favicon.ico">
@@ -17,10 +17,7 @@
 <!--    <link href="/css/bootstrap.min.css" rel="stylesheet">-->
 <!--    <link href="/css/toastr.min.css" rel="stylesheet">-->
 
-    <!--
-        custom style，为什么不写在单独的css文件里？资源文件上传到cdn后，再对文件内容改动后再上传cdn，
-        cdn同名文件有缓存，刷新不及时，每次都需要修改文件名后再上传cdn，这样很麻烦
-    -->
+   
     <style>
         body {
             -webkit-font-smoothing: antialiased;

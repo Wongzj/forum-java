@@ -106,7 +106,7 @@
 <template>
   <div class="article-editor article-box" :style="{height: containerHeight}">
     <Modal
-        title="选择标签"
+        title="Select Label"
         v-model="isShowTagSelectModel"
         :mask-closable="false">
       <div v-for="(tagGroup, index) in showTags" :key="index">
@@ -118,13 +118,14 @@
     </Modal>
     <div class="article-box-title">
       <div class="article-box--title-home">
-        <Button @click="goHome" type="info">返回首页</Button>
+        <Button @click="goHome" type="info">Back to Home</Button>
       </div>
-      <input v-model="article.title" class="article-box-title-input" placeholder="这里输入问题描述"/>
+      <input v-model="article.title" class="article-box-title-input" placeholder="Enter problem description here"/>
     </div>
     <mavon-editor
       class="article-box-content"
-      placeholder="这里输入问题内容，markdown格式。"
+      language="en"
+      placeholder="Enter the question content here, in markdown format."
       :style="{zIndex:0}"
       :toolbars="editorSetting"
       v-model="article.markdownContent"
@@ -140,11 +141,11 @@
           closable
           type="border"
           color="success">{{ tag.name }}</Tag>
-        <Button type="dashed" size="small" @click="showTagSelectModel">添加标签</Button>
+        <Button type="dashed" size="small" @click="showTagSelectModel">Add Label</Button>
       </div>
       <div class="article-box-foot-publish">
-        <Button @click="updateArticle" type="info">保存并继续编辑</Button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button @click="saveArticle" type="success">发布</Button>
+        <Button @click="updateArticle" type="info">Save and continue editing</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <Button @click="saveArticle" type="success">Release</Button>
       </div>
     </div>
   </div>
@@ -168,39 +169,39 @@ export default {
         tags: []
       },
       editorSetting: {
-        bold: true, // 粗体
-        italic: true, // 斜体
-        header: true, // 标题
-        underline: true, // 下划线
-        strikethrough: true, // 中划线
-        mark: true, // 标记
-        superscript: true, // 上角标
-        subscript: true, // 下角标
-        quote: true, // 引用
-        ol: true, // 有序列表
-        ul: true, // 无序列表
-        link: true, // 链接
-        imagelink: true, // 图片链接
-        code: true, // code
-        table: true, // 表格
-        fullscreen: true, // 全屏编辑
-        readmodel: true, // 沉浸式阅读
-        // htmlcode: true, // 展示html源码
-        help: true, // 帮助
+        bold: true, 
+        italic: true, 
+        header: true, 
+        underline: true, 
+        strikethrough: true, 
+        mark: true, 
+        superscript: true, 
+        subscript: true, 
+        quote: true, 
+        ol: true, 
+        ul: true, 
+        link: true, 
+        imagelink: true, 
+        code: true, 
+        table: true, 
+        fullscreen: true, 
+        readmodel: true, 
+        // htmlcode: true, 
+        help: true, 
         /* 1.3.5 */
-        undo: true, // 上一步
-        redo: true, // 下一步
-        // trash: true, // 清空
-        save: true, // 保存（触发events中的save事件）
+        undo: true, 
+        redo: true, 
+        // trash: true, 
+        save: true, 
         /* 1.4.2 */
-        navigation: true, // 导航目录
+        navigation: true,
         /* 2.1.8 */
-        alignleft: true, // 左对齐
-        aligncenter: true, // 居中
-        alignright: true, // 右对齐
+        alignleft: true, 
+        aligncenter: true, 
+        alignright: true, 
         /* 2.2.1 */
-        // subfield: true, // 单双栏模式
-        preview: true // 预览
+        // subfield: true, 
+        preview: true 
       }
     }
   },
@@ -227,7 +228,7 @@ export default {
     },
     tagChange (checkedNameList) {
       if (checkedNameList.length > 5) {
-        this.$Message.error('标签最多选择5个')
+        this.$Message.error('Select up to 5 tags')
         const selectedTagNames = []
         for (let i = 0; i < this.article.tags.length; i++) {
           selectedTagNames.push(this.article.tags[i].name)
@@ -246,10 +247,10 @@ export default {
       this.article.tags = selectedTags
     },
     updateArticle () {
-      this.postArticle('更新成功', () => {})
+      this.postArticle('Update completed', () => {})
     },
     saveArticle () {
-      this.postArticle('保存成功', () => {
+      this.postArticle('Saved successfully', () => {
         location.href = '/faq'
       })
     },
@@ -282,19 +283,19 @@ export default {
     },
     preCheck () {
       if (!this.article.title) {
-        this.$Message.error('标题不能为空')
+        this.$Message.error('Title cannot be empty')
         return false
       }
       if (this.article.title.length > 40) {
-        this.$Message.error('标题不能超过40个字符')
+        this.$Message.error('Title cannot exceed 40 characters')
         return false
       }
       if (!this.article.markdownContent) {
-        this.$Message.error('内容不能为空')
+        this.$Message.error('Content cannot be empty')
         return false
       }
       if (!this.article.tags || this.article.tags.length === 0) {
-        this.$Message.error('标签不能为空')
+        this.$Message.error('Label cannot be empty')
         return false
       }
       return true
@@ -396,15 +397,15 @@ export default {
     if (this.$route.params.id) {
       this.loadArticle(this.$route.params.id)
     } else {
-      document.title = '提问题'
-      this.article.markdownContent = `# 一 一级标题
+      document.title = 'Ask Questions'
+      this.article.markdownContent = `# 1 First-level Title
 
-## 1.1 二级标题
+## 1.1 Secondary Title
 
 - xxxx;
 - xxxx;
 
-## 1.2 二级标题
+## 1.2 Secondary Title
 
 1. xxxx;
 2. xxxx;`

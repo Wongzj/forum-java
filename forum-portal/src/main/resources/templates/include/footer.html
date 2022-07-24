@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <footer th:fragment="footer">
     <div class="foot custom-bg-color">
         <ul class="foot-link">
-            <!--<li><a class="text-reset" href="javascript:;">在线人数：<span th:text="${onlineUsers}"></span></a></li>-->
-            <!--<li><a class="text-reset" href="https://www.developers.pub/blog" target="_blank">博客文章</a></li>-->
-            <li><span th:text="${globalConfig.websiteRecord}">皖ICP备17014120号</span>
+            <li><span th:text="${globalConfig.websiteRecord}"></span>
                 <a class="text-reset"
                    href="https://www.developers.pub"
-                   th:text="'© 2016-' + ${#dates.format(#dates.createNow(), 'yyyy')} + ' 杭州余杭顽强网络技术工作室'"
-                   target="_blank"> © 2016-2021 杭州余杭顽强网络技术工作室</a>
+                   th:text="'Pet Kingdom'"
+                   target="_blank">Pet Kingdom</a>
             </li>
         </ul>
     </div>
@@ -27,17 +25,16 @@
 
     <!-- custom js -->
     <script>
-        // 登录
         $('#loginBtn').on('click', function () {
             var email = $('#loginEmail').val();
             if (!email) {
-                toastr.error('登录邮箱不能为空');
+                toastr.error('Login email cannot be empty');
                 return false;
             }
 
             var password = $('#loginPassword').val();
             if (!password) {
-                toastr.error('登录密码不能为空');
+                toastr.error('Login password cannot be empty');
                 return false;
             }
 
@@ -50,42 +47,41 @@
             });
         });
 
-        // 注册
         $('#registerBtn').on('click', function () {
             var email = $('#registerEmail').val();
             if (!email) {
-                toastr.error('注册邮箱不能为空');
+                toastr.error('The registered email address cannot be empty');
                 return;
             }
             if (email.indexOf('@') < 0) {
-                toastr.error('请输入正确的邮箱格式');
+                toastr.error('Please enter the correct email format');
                 return;
             }
 
             var nickname = $('#registerNickname').val();
             if (!nickname) {
-                toastr.error('昵称不能为空');
+                toastr.error('Nick name can not be empty');
                 return;
             }
             if (nickname.length > 10) {
-                toastr.error('昵称不能超过10个字符');
+                toastr.error('Nickname cannot exceed 10 characters');
                 return;
             }
 
             var password = $('#registerPassword').val();
             if (!password) {
-                toastr.error('注册密码不能为空');
+                toastr.error('Registration password cannot be empty');
                 return;
             }
 
             var password2 = $('#registerPassword2').val();
             if (!password2) {
-                toastr.error('二次确认密码不能为空');
+                toastr.error('The second confirmation password cannot be empty');
                 return;
             }
 
             if (password2 !== password) {
-                toastr.error('二次密码不一致，请重新输入');
+                toastr.error('The secondary password is inconsistent, please re-enter');
                 return;
             }
 
@@ -99,16 +95,16 @@
             });
         });
 
-        // 保存文章
+
         $('#updateArticleBtn').on('click', function () {
             saveArticle(function (data) {
-                toastr.success('保存成功');
+                toastr.success('Successfully saved');
             });
         });
 
         $('#saveArticleBtn').on('click', function () {
             saveArticle(function (data) {
-                toastr.success('发表成功');
+                toastr.success('Post successfully');
                 location.href = '/';
             });
         });
@@ -116,29 +112,29 @@
         var saveArticle = function(callback) {
             var type = $('#type').val();
             if (!type) {
-                toastr.error('类别不能为空');
+                toastr.error('Category cannot be empty');
                 return;
             }
 
             var title = $('#title').val();
             if (!title) {
-                toastr.error('标题不能为空');
+                toastr.error('Title cannot be empty');
                 return;
             }
             if (title.length > 40) {
-                toastr.error('标题不能超过40个字符');
+                toastr.error('Title cannot exceed 40 characters');
                 return;
             }
 
             var content = $('#content').val();
             if (!content) {
-                toastr.error('内容不能为空');
+                toastr.error('Content cannot be empty');
                 return;
             }
 
             var tags = $('#tags').val();
             if (!tags) {
-                toastr.error('标签不能为空');
+                toastr.error('Tag cannot be empty');
                 return;
             }
 
@@ -157,16 +153,16 @@
             });
         };
 
-        // 提交问答
+
         $('#updateFaqBtn').on('click', function () {
             saveFaq(function (data) {
-                toastr.success('保存成功');
+                toastr.success('Successfully saved');
             });
         });
 
         $('#saveFaqBtn').on('click', function () {
             saveFaq(function (data) {
-                toastr.success('提交成功');
+                toastr.success('Submitted successfully');
                 location.href = '/faq';
             });
         });
@@ -174,23 +170,23 @@
         var saveFaq = function (callback) {
             var title = $('#title').val();
             if (!title) {
-                toastr.error('标题不能为空');
+                toastr.error('Title cannot be empty');
                 return;
             }
             if (title.length > 50) {
-                toastr.error('标题不能超过50个字符');
+                toastr.error('Title cannot exceed 50 characters');
                 return;
             }
 
             var content = $('#content').val();
             if (!content) {
-                toastr.error('内容不能为空');
+                toastr.error('Content cannot be empty');
                 return;
             }
 
             var tags = $('#tags').val();
             if (!tags) {
-                toastr.error('标签不能为空');
+                toastr.error('Tag cannot be empty');
                 return;
             }
 
@@ -218,7 +214,7 @@
                 }
             }
             if (tagIdsStr.length > 5) {
-                toastr.error("标签最多可选择 5 个")
+                toastr.error("Up to 5 tags can be selected")
             } else {
                 $('#tags').val(tagIdsStr.join(','));
                 $('#tagInput').val(tagNamesStr.join(','));
@@ -233,15 +229,15 @@
                     post('/user-rest/follow/' + this.dataset.followed, {}, function (data) {
                         thiz.dataset.hasFollow = 'true';
                         followBtn.attr('class', followBtn.attr('class').replaceAll('btn-primary', 'btn-secondary'));
-                        followBtn.html('取消关注');
-                        toastr.success("关注成功");
+                        followBtn.html('Unsubscribe');
+                        toastr.success("Subscribed");
                     })
                 } else {
                     post('/user-rest/cancel-follow/' + this.dataset.followed, {}, function (data) {
                         thiz.dataset.hasFollow = 'false';
                         followBtn.attr('class', followBtn.attr('class').replaceAll('btn-secondary', 'btn-primary'));
-                        followBtn.html('关注 TA');
-                        toastr.success("取消关注成功");
+                        followBtn.html('Subscribed TA');
+                        toastr.success("Unfollow success");
                     })
                 }
             });
@@ -273,7 +269,7 @@
                         callback();
                     }
                 }
-            } else { // 其他浏览器
+            } else { 
                 secScript.onload = function () {
                     callback();
                 }
@@ -292,7 +288,7 @@
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
-        // 放在最后，如果 https://unpkg.com/feather-icons 加载失败，不影响正常页面点击事件
+        // Put it at the end, if https://unpkg.com/feather-icons fails to load, it will not affect the normal page click event
         feather.replace();
     </script>
 

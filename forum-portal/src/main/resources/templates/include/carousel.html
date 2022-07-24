@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <div th:fragment="carousel(id, carouselList)"
      th:id="${id}"
      th:if="${!#lists.isEmpty(carouselList)}" id="main_carousel" class="carousel slide" data-ride="carousel">
-    <!-- 指示符 -->
+    <!-- indicator -->
     <ul class="carousel-indicators">
         <li th:each="carousel,iterStat : ${carouselList}"
             th:data-slide-to="${iterStat.index}"
@@ -13,7 +13,7 @@
             data-slide-to="0" class="active"
             data-target="#main_carousel"></li>
     </ul>
-    <!-- 轮播图片 -->
+    <!-- carousel images -->
     <div class="carousel-inner">
         <div th:each="carousel,iterStat : ${carouselList}"
              th:class="${'carousel-item ' + (iterStat.index == 0 ? 'active' : '')}"
@@ -26,7 +26,7 @@
             </a>
         </div>
     </div>
-    <!-- 左右切换按钮 -->
+    <!-- Left and right toggle buttons -->
     <a class="carousel-control-prev" th:href="${'#' + id}" href="#main_carousel" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </a>
