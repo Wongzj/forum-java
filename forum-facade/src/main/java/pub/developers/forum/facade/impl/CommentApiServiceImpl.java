@@ -14,11 +14,7 @@ import pub.developers.forum.facade.validator.PageRequestModelValidator;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/6
- * @desc
- **/
+
 @Service
 public class CommentApiServiceImpl implements CommentApiService {
 

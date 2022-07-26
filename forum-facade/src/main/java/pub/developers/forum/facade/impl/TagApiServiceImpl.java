@@ -22,11 +22,7 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/30
- * @desc
- **/
+
 @Service
 public class TagApiServiceImpl implements TagApiService {
 

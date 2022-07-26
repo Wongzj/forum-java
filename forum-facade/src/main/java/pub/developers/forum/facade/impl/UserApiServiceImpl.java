@@ -22,11 +22,7 @@ import javax.annotation.Resource;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/30
- * @desc
- **/
+
 @Service
 public class UserApiServiceImpl implements UserApiService {
 

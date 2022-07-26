@@ -4,11 +4,7 @@ import org.springframework.util.ObjectUtils;
 import pub.developers.forum.api.request.user.*;
 import pub.developers.forum.common.support.CheckUtil;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/30
- * @desc
- **/
+
 public class UserValidator {
 
     public static void register(UserRegisterRequest request) {

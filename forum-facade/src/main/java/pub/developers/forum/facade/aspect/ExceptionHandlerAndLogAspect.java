@@ -14,11 +14,7 @@ import pub.developers.forum.facade.support.ResultModelUtil;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/28
- * @desc
- **/
+
 @Slf4j
 @Component
 @Aspect

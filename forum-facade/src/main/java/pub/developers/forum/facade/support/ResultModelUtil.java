@@ -3,11 +3,7 @@ package pub.developers.forum.facade.support;
 import pub.developers.forum.api.model.ResultModel;
 import pub.developers.forum.common.enums.ErrorCodeEn;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/30
- * @desc
- **/
+
 public class ResultModelUtil {
 
     public static ResultModel success() {

@@ -10,11 +10,7 @@ import pub.developers.forum.facade.validator.FileValidator;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/23
- * @desc
- **/
+
 @Service
 public class FileApiServiceImpl implements FileApiService {
 
