@@ -10,11 +10,7 @@ import pub.developers.forum.api.service.TagApiService;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/13
- * @desc
- **/
+
 @RestController
 @RequestMapping("/tag-rest")
 public class TagRestController {

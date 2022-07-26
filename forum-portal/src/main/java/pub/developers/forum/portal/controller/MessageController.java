@@ -23,11 +23,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/5
- * @desc
- **/
+
 @Controller
 @RequestMapping("/message")
 public class MessageController {

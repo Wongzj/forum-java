@@ -30,11 +30,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 import java.util.function.Function;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/25
- * @desc
- **/
+
 @Slf4j
 @Controller
 @RequestMapping("/user")

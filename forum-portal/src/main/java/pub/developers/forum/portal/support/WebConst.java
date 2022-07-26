@@ -1,10 +1,6 @@
 package pub.developers.forum.portal.support;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/25
- * @desc
- **/
+
 public interface WebConst {
 
     String PAGE_NO_NAME = "pageNo";

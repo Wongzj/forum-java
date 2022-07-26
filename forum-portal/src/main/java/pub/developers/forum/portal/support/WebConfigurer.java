@@ -6,11 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/29
- * @desc
- **/
+
 @Configuration
 public class WebConfigurer implements WebMvcConfigurer {
 

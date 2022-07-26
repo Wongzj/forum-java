@@ -27,11 +27,7 @@ import pub.developers.forum.portal.support.WebUtil;
 import javax.annotation.Resource;
 import java.util.*;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/25
- * @desc
- **/
+
 @Slf4j
 @Controller
 @RequestMapping("/faq")

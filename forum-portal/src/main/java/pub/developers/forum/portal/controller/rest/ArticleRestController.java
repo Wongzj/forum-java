@@ -14,11 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 @RestController
 @RequestMapping("/article-rest")
 public class ArticleRestController {

@@ -7,11 +7,6 @@ import pub.developers.forum.common.enums.PostsCategoryEn;
 
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
 @Data
 public class BasePosts extends BaseEntity {
 

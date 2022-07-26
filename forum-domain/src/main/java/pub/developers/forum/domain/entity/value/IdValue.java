@@ -9,8 +9,8 @@ import pub.developers.forum.common.enums.IdValueTypeEn;
 import java.io.Serializable;
 
 /**
- * @author Qiangqiang.Bian
- * @create 2020/10/22
+ * @author wangzhijian
+ * @create 2022/5/22
  * @desc
  **/
 @Data

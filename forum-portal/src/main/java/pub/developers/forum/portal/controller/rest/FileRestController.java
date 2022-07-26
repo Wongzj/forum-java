@@ -22,11 +22,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/16
- * @desc
- **/
+
 @Slf4j
 @RestController
 @RequestMapping("/file-rest")

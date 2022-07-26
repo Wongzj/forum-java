@@ -10,11 +10,7 @@ import pub.developers.forum.common.exception.BizException;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/2
- * @desc
- **/
+
 @Component
 @Aspect
 public class GetMappingAspect {

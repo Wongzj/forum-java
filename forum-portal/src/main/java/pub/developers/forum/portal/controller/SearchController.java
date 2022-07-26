@@ -19,11 +19,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Map;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/2
- * @desc
- **/
+
 @Controller
 @RequestMapping("/search")
 public class SearchController {

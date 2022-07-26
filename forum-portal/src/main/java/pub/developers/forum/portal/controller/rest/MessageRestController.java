@@ -12,11 +12,7 @@ import pub.developers.forum.portal.support.WebUtil;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/5
- * @desc
- **/
+
 @RestController
 @RequestMapping("/message-rest")
 public class MessageRestController {

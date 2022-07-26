@@ -7,11 +7,7 @@ import pub.developers.forum.domain.entity.Config;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/26
- * @desc
- **/
+
 public interface ConfigRepository {
 
     /**

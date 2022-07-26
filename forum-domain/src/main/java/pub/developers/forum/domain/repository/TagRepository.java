@@ -10,11 +10,7 @@ import pub.developers.forum.domain.entity.Tag;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/7/31
- * @desc
- **/
+】
 public interface TagRepository {
 
     void save(Tag tag);

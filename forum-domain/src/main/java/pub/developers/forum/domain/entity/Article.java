@@ -6,11 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.BeanUtils;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 @Data
 @Builder
 @AllArgsConstructor

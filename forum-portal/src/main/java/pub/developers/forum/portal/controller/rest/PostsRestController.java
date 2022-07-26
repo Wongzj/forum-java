@@ -12,11 +12,6 @@ import pub.developers.forum.portal.support.WebUtil;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/25
- * @desc
- **/
 @RestController
 @RequestMapping("/posts-rest")
 public class PostsRestController {

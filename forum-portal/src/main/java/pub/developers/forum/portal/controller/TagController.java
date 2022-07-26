@@ -26,11 +26,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/19
- * @desc
- **/
+
 @Slf4j
 @Controller
 @RequestMapping("/tag")

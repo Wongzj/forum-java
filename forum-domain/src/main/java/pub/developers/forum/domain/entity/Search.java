@@ -6,11 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import pub.developers.forum.common.enums.SearchTypeEn;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/2
- * @desc
- **/
+
 @Data
 @Builder
 @AllArgsConstructor

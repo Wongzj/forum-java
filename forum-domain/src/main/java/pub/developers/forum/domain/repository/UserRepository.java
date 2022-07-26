@@ -7,11 +7,7 @@ import pub.developers.forum.domain.entity.User;
 
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/7/31
- * @desc
- **/
+
 public interface UserRepository {
 
     void save(User user);

@@ -18,11 +18,6 @@ import pub.developers.forum.portal.support.WebUtil;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/27
- * @desc
- **/
 @RestController
 @RequestMapping("/admin-rest/faq")
 public class AdminRestFaqController {

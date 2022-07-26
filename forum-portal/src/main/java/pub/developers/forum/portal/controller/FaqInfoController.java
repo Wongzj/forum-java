@@ -30,11 +30,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/10/26
- * @desc
- **/
+
 @Slf4j
 @Controller
 @RequestMapping("/faq")

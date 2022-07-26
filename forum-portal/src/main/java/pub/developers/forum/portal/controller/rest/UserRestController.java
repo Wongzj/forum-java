@@ -20,11 +20,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/29
- * @desc
- **/
+
 @RestController
 @RequestMapping("/user-rest")
 public class UserRestController {

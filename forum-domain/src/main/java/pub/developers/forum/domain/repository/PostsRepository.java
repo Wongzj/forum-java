@@ -6,11 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/6
- * @desc
- **/
+
 public interface PostsRepository {
 
     BasePosts get(Long id);

@@ -19,11 +19,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 @RestController
 @RequestMapping("/admin-rest/article")
 public class AdminRestArticleController {

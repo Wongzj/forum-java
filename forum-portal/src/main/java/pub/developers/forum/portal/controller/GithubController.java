@@ -15,11 +15,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2021/5/15
- * @desc
- **/
+
 @Slf4j
 @Controller
 @RequestMapping("/github")

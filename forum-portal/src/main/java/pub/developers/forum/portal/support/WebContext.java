@@ -2,11 +2,7 @@ package pub.developers.forum.portal.support;
 
 import pub.developers.forum.api.response.user.UserInfoResponse;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/29
- * @desc
- **/
+
 public class WebContext {
 
     /**

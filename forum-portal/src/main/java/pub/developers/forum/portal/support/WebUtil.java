@@ -34,11 +34,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/25
- * @desc
- **/
+
 @Data
 @ConfigurationProperties(prefix = "custom-config.upload-file.qiniu")
 @Component

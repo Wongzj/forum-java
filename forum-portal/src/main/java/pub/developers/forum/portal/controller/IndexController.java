@@ -31,11 +31,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/9/15
- * @desc
- **/
+
 @Slf4j
 @Controller
 @RequestMapping("/")

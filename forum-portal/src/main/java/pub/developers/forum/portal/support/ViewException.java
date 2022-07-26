@@ -2,11 +2,7 @@ package pub.developers.forum.portal.support;
 
 import lombok.Data;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/2
- * @desc
- **/
+
 @Data
 public class ViewException extends RuntimeException {
 

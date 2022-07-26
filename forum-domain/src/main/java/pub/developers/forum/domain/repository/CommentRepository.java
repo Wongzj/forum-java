@@ -6,11 +6,7 @@ import pub.developers.forum.domain.entity.Comment;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/5
- * @desc
- **/
+
 public interface CommentRepository {
 
     void save(Comment comment);

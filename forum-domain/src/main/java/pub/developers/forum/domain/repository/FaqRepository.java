@@ -6,11 +6,7 @@ import pub.developers.forum.domain.entity.value.PostsPageQueryValue;
 
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/1
- * @desc
- **/
+
 public interface FaqRepository {
 
     void save(Faq faq);

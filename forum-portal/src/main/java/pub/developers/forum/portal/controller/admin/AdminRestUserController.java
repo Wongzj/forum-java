@@ -16,11 +16,7 @@ import pub.developers.forum.portal.support.WebUtil;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/8
- * @desc
- **/
+]
 @RestController
 @RequestMapping("/admin-rest/user")
 public class AdminRestUserController {

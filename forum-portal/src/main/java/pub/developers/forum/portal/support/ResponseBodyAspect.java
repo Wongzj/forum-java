@@ -7,11 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 import pub.developers.forum.common.support.RequestContext;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/25
- * @desc
- **/
+
 @Component
 @Aspect
 public class ResponseBodyAspect {

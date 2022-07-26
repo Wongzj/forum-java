@@ -6,11 +6,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/13
- * @desc
- **/
+
 @Component
 public class CorsInterceptor extends HandlerInterceptorAdapter {
 
