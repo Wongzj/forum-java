@@ -6,11 +6,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.UserDO;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/29
- * @desc
- **/
+
 public interface UserDAO {
 
     void insert(UserDO userDO);

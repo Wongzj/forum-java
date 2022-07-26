@@ -5,11 +5,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.UserFoodDO;
 
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/3
- * @desc
- **/
+
 public interface UserFoodDAO {
 
     void insert(UserFoodDO userFoodDO);

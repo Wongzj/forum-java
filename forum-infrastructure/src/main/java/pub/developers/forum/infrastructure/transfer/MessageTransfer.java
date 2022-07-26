@@ -10,11 +10,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.MessageDO;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/5
- * @desc
- **/
+
 public class MessageTransfer {
 
     public static Message toMessage(MessageDO messageDO) {

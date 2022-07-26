@@ -6,11 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/23
- * @desc
- **/
+
 @Data
 public class BaseDO implements Serializable {
     private static final long serialVersionUID = 1L;

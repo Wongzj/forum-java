@@ -10,11 +10,6 @@ import pub.developers.forum.infrastructure.dal.dataobject.ConfigDO;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/26
- * @desc
- **/
 public class ConfigTransfer {
 
     public static List<Config> toConfigs(List<ConfigDO> configDOList) {

@@ -6,11 +6,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.CommentDO;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/5
- * @desc
- **/
+
 public interface CommentDAO {
 
     CommentDO findByPrimaryKey(@Param("id") Long id);

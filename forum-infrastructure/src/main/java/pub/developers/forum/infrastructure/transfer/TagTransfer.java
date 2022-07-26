@@ -11,11 +11,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.TagDO;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 public class TagTransfer {
 
     public static List<Faq> toFaqs(List<PostsDO> postsDOS) {

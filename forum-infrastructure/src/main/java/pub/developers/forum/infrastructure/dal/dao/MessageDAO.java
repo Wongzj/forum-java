@@ -5,11 +5,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.MessageDO;
 
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/5
- * @desc
- **/
+
 public interface MessageDAO {
 
     void insert(MessageDO messageDO);

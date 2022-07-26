@@ -4,11 +4,7 @@ import pub.developers.forum.common.enums.FollowedTypeEn;
 import pub.developers.forum.domain.entity.Approval;
 import pub.developers.forum.infrastructure.dal.dataobject.UserFollowDO;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/1
- * @desc
- **/
+
 public class ApprovalTransfer {
 
     public static UserFollowDO toUserFollowDO(Approval approval) {

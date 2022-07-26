@@ -20,11 +20,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/2
- * @desc
- **/
+
 @Component
 public class DbSearchServiceImpl extends AbstractPostsRepository implements SearchService {
 

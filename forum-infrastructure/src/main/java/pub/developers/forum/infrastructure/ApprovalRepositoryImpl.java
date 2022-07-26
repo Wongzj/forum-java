@@ -12,11 +12,7 @@ import pub.developers.forum.infrastructure.transfer.ApprovalTransfer;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/1
- * @desc
- **/
+
 @Repository
 public class ApprovalRepositoryImpl implements ApprovalRepository {
 

@@ -15,11 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/5
- * @desc
- **/
+
 @Repository
 public class CommentRepositoryImpl implements CommentRepository {
 

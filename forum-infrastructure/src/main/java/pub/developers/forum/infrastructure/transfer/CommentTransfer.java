@@ -8,11 +8,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.CommentDO;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/5
- * @desc
- **/
+
 public class CommentTransfer {
 
     public static CommentDO toCommentDO(Comment comment) {

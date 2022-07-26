@@ -6,11 +6,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.TagDO;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 public interface TagDAO {
 
     void insert(TagDO tagDO);

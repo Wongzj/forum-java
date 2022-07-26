@@ -10,11 +10,7 @@ import pub.developers.forum.domain.service.MessageService;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/22
- * @desc
- **/
+
 @Service
 public class MessageServiceImpl implements MessageService {
 

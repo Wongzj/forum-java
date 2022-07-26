@@ -20,11 +20,7 @@ import pub.developers.forum.domain.service.GithubService;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2021/5/15
- * @desc
- **/
+
 @Slf4j
 @Data
 @ConfigurationProperties(prefix = "custom-config.oauth.github")

@@ -21,11 +21,7 @@ import javax.annotation.Resource;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/10/22
- * @desc
- **/
+
 @Service
 public class DbCacheServiceImpl implements CacheService {
 

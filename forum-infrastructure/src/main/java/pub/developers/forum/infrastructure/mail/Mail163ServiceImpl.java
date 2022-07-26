@@ -17,11 +17,7 @@ import java.security.Security;
 import java.util.Properties;
 import java.util.function.Consumer;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/4
- * @desc
- **/
+
 @Data
 @ConfigurationProperties(prefix = "custom-config.mail.smtp")
 @Component

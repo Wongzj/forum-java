@@ -6,11 +6,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.TagPostsMappingDO;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 public interface TagPostsMappingDAO {
 
     void insert(TagPostsMappingDO tagPostsMappingDO);

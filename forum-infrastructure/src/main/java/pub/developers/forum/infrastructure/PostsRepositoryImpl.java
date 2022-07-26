@@ -14,11 +14,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/6
- * @desc
- **/
+
 @Repository
 public class PostsRepositoryImpl implements PostsRepository {
 

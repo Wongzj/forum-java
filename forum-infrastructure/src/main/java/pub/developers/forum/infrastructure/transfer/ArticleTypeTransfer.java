@@ -9,11 +9,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.ArticleTypeDO;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 public class ArticleTypeTransfer {
 
     public static ArticleTypeDO toArticleTypeDO(ArticleType articleType) {

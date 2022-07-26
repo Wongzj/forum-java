@@ -4,11 +4,7 @@ import org.apache.ibatis.annotations.Param;
 import pub.developers.forum.infrastructure.dal.dataobject.ArticleTypeDO;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 public interface ArticleTypeDAO {
 
     void insert(ArticleTypeDO articleTypeDO);

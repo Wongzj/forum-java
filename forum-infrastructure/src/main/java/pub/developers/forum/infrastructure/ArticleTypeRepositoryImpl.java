@@ -22,11 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
 @Repository
 public class ArticleTypeRepositoryImpl implements ArticleTypeRepository {
 

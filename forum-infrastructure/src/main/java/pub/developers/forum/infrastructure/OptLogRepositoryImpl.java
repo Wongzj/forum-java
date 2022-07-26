@@ -18,11 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/10/22
- * @desc
- **/
+
 @Repository
 public class OptLogRepositoryImpl implements OptLogRepository {
 

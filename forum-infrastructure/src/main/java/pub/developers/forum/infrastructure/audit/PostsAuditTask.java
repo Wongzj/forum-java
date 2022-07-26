@@ -10,11 +10,6 @@ import pub.developers.forum.infrastructure.dal.dataobject.PostsDO;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/1
- * @desc 帖子自动审核通过
- **/
 @Service
 public class PostsAuditTask {
 

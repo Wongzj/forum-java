@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/26
- * @desc
- **/
+
 @Data
 @Builder
 @AllArgsConstructor

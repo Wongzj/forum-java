@@ -6,11 +6,7 @@ import pub.developers.forum.infrastructure.dal.dataobject.CacheDO;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/23
- * @desc
- **/
+
 public interface CacheDAO {
 
     void insertBatch(List<CacheDO> cacheDOS);

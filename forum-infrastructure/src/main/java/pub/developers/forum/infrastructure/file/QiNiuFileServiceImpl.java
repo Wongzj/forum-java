@@ -15,11 +15,7 @@ import pub.developers.forum.common.support.CheckUtil;
 import pub.developers.forum.common.support.LogUtil;
 import pub.developers.forum.domain.service.FileService;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/23
- * @desc
- **/
+
 @Slf4j
 @Data
 @ConfigurationProperties(prefix = "custom-config.upload-file.qiniu")
