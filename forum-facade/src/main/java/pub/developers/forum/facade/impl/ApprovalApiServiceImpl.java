@@ -8,11 +8,7 @@ import pub.developers.forum.facade.support.ResultModelUtil;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/1
- * @desc
- **/
+
 @Service
 public class ApprovalApiServiceImpl implements ApprovalApiService {
 

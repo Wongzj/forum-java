@@ -19,11 +19,7 @@ import pub.developers.forum.facade.validator.PageRequestModelValidator;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/1
- * @desc
- **/
+
 @Service
 public class FaqApiServiceImpl implements FaqApiService {
 

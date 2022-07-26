@@ -5,11 +5,7 @@ import pub.developers.forum.api.request.AdminBooleanRequest;
 import pub.developers.forum.api.request.article.ArticleSaveArticleRequest;
 import pub.developers.forum.common.support.CheckUtil;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
+
 public class ArticleValidator {
 
     public static void validatorBooleanRequest(AdminBooleanRequest booleanRequest) {

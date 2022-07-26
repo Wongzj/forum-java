@@ -4,11 +4,7 @@ import pub.developers.forum.api.request.message.MessagePageRequest;
 import pub.developers.forum.common.enums.MessageTypeEn;
 import pub.developers.forum.common.support.CheckUtil;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/5
- * @desc
- **/
+
 public class MessageValidator {
 
     public static void page(MessagePageRequest request) {

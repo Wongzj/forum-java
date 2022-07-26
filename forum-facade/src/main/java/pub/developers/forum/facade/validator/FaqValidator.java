@@ -4,11 +4,7 @@ import pub.developers.forum.api.request.faq.FaqSaveFaqRequest;
 import pub.developers.forum.api.request.faq.FaqSolutionRequest;
 import pub.developers.forum.common.support.CheckUtil;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/1
- * @desc
- **/
+
 public class FaqValidator {
 
     public static void saveFaq(FaqSaveFaqRequest request) {

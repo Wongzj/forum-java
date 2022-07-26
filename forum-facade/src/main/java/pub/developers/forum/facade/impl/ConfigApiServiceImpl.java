@@ -18,11 +18,7 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/26
- * @desc
- **/
+
 @Service
 public class ConfigApiServiceImpl implements ConfigApiService {
 

@@ -12,11 +12,7 @@ import pub.developers.forum.facade.validator.PageRequestModelValidator;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/2
- * @desc
- **/
+
 @Service
 public class SearchApiServiceImpl implements SearchApiService {
 

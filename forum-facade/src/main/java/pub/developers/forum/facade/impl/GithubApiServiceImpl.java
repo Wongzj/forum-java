@@ -10,11 +10,7 @@ import pub.developers.forum.facade.support.ResultModelUtil;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2021/5/15
- * @desc
- **/
+
 @Service
 public class GithubApiServiceImpl implements GithubApiService {
 
