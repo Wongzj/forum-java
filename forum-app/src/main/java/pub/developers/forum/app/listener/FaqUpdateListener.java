@@ -10,11 +10,6 @@ import pub.developers.forum.domain.repository.TagRepository;
 import javax.annotation.Resource;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/24
- * @desc
- **/
 @Component
 public class FaqUpdateListener extends EventBus.EventHandler<Pair<Faq>> {
 
@@ -31,11 +26,9 @@ public class FaqUpdateListener extends EventBus.EventHandler<Pair<Faq>> {
         Faq oldFaq = pair.getValue0();
         Faq newFaq = pair.getValue1();
 
-        // 由于FaqManager里已经减了一遍标签的引用计数，需把原来的加回来
         Set<Long> oldTags=Pair.tagToLong(oldFaq.getTags());
         tagRepository.increaseRefCount(oldTags);
 
-        // 更新标签引用计数
         Set<Long> addTags = Pair.diff(newFaq.getTags(), oldFaq.getTags());
         Set<Long> removeTags = Pair.diff(oldFaq.getTags(), newFaq.getTags());
         if (!ObjectUtils.isEmpty(addTags)) {

@@ -10,11 +10,6 @@ import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/3
- * @desc
- **/
 @Component
 public class FoodApprovalCreateListener extends EventBus.EventHandler<Pair<Long>> {
 

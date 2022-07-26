@@ -7,11 +7,6 @@ import pub.developers.forum.domain.repository.UserFoodRepository;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/4
- * @desc
- **/
 @Component
 public class FoodPostsDeleteListener extends EventBus.EventHandler<BasePosts> {
 

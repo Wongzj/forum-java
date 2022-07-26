@@ -2,7 +2,7 @@ package pub.developers.forum.domain.service;
 
 import pub.developers.forum.common.enums.CacheBizTypeEn;
 
-terface CacheService {
+public interface CacheService {
 
     /**
      * 存储

@@ -7,11 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/7/31
- * @desc
- **/
 @Data
 @Builder
 @AllArgsConstructor
@@ -20,14 +15,8 @@ public class TagCreateRequest implements Serializable {
 
     private String groupName;
 
-    /**
-     * 名称
-     */
     private String name;
 
-    /**
-     * 描述
-     */
     private String description;
 
 }

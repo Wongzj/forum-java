@@ -31,11 +31,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/7/31
- * @desc
- **/
 @Component
 public class TagManager extends AbstractPostsManager {
 
@@ -47,9 +42,6 @@ public class TagManager extends AbstractPostsManager {
 
     private static final String ALL_USED_TAG_CACHE_KEY = "all_used_tag";
 
-    /**
-     * 1小时
-     */
     private static final Long TAG_CACHE_EXPIRE_SECOND = 60 * 60L;
 
     @IsLogin(role = UserRoleEn.ADMIN)

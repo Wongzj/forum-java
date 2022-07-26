@@ -10,11 +10,6 @@ import pub.developers.forum.domain.entity.User;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/6
- * @desc
- **/
 public class CommentTransfer {
 
     public static Comment toComment(CommentCreateRequest request, User user) {

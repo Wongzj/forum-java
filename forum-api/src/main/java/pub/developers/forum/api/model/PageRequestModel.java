@@ -6,11 +6,6 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-/**
- * @author Qiangqiang.Bian
- * @create 22/6/23
- * @desc
- **/
 @Getter
 @NoArgsConstructor
 public class PageRequestModel<T> implements Serializable {

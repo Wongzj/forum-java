@@ -29,11 +29,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/6
- * @desc
- **/
 @Component
 public class CommentManager {
 
@@ -65,10 +60,8 @@ public class CommentManager {
             }
         }
 
-        // 保存
         commentRepository.save(comment);
 
-        // 增加帖子评论数
         postsRepository.increaseComments(posts.getId(), posts.getUpdateAt());
 
         Map<String, Object> msg = new HashMap<>();

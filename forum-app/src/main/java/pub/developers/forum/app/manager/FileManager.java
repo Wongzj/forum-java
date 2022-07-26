@@ -7,11 +7,6 @@ import pub.developers.forum.domain.service.FileService;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/23
- * @desc
- **/
 @Component
 public class FileManager {
 

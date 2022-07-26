@@ -7,11 +7,6 @@ import pub.developers.forum.common.model.PageResult;
 
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/30
- * @desc
- **/
 public class PageUtil {
 
     public static <T> PageRequest<T> buildPageRequest(PageRequestModel pageRequestModel, T filter) {

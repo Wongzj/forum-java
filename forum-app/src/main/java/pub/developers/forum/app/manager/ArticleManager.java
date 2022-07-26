@@ -31,11 +31,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
 @Slf4j
 @Component
 public class ArticleManager extends AbstractPostsManager {
@@ -51,36 +46,27 @@ public class ArticleManager extends AbstractPostsManager {
     @IsLogin
     @Transactional
     public Long saveArticle(ArticleSaveArticleRequest request) {
-        // 创建
         if (ObjectUtils.isEmpty(request.getId())) {
-            // 校验类型
             ArticleType articleType = checkArticleType(request.getTypeId());
 
-            // 校验标签
             Set<Tag> selectTags = checkTags(request.getTagIds());
 
             Article article = ArticleTransfer.toArticle(request, articleType, selectTags, false, INIT_SORT);
             articleRepository.save(article);
 
-            // 触发文章创建事件
             EventBus.emit(EventBus.Topic.ARTICLE_CREATE, article);
 
             return article.getId();
         }
 
-        // 更新
-        // 校验文章
         Article article = articleRepository.get(request.getId());
         CheckUtil.isEmpty(article, ErrorCodeEn.ARTICLE_NOT_EXIST);
         CheckUtil.isFalse(LoginUserContext.getUser().getId().equals(article.getAuthor().getId()), ErrorCodeEn.ARTICLE_NOT_EXIST);
 
-        // 校验类型
         ArticleType articleType = checkArticleType(request.getTypeId());
 
-        // 校验标签
         Set<Tag> selectTags = checkTags(request.getTagIds());
 
-        // 删除旧标签关联关系
         tagRepository.deletePostsMapping(request.getId());
 
         Article oldArticle = article.copy();
@@ -88,7 +74,6 @@ public class ArticleManager extends AbstractPostsManager {
 
         articleRepository.update(newArticle);
 
-        // 触发文章更新事件
         EventBus.emit(EventBus.Topic.ARTICLE_UPDATE, Pair.build(oldArticle, newArticle));
 
         return request.getId();
@@ -254,7 +239,6 @@ public class ArticleManager extends AbstractPostsManager {
             CheckUtil.isFalse(user.getId().equals(article.getAuthor().getId()), ErrorCodeEn.ARTICLE_IN_AUDIT_PROCESS);
         }
 
-        // 触发文章查看详情事件
         EventBus.emit(EventBus.Topic.POSTS_INFO, article);
 
         return ArticleTransfer.toArticleInfoResponse(article);

@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/19
- * @desc
- **/
+
 @Data
 @Builder
 @AllArgsConstructor

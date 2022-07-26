@@ -9,11 +9,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/20
- * @desc
- **/
 @Data
 @Builder
 @AllArgsConstructor

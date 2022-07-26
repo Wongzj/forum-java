@@ -22,11 +22,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/1
- * @desc
- **/
 public class FaqTransfer {
 
     public static FaqInfoResponse toFaqInfoResponse(Faq faq) {
@@ -89,7 +84,7 @@ public class FaqTransfer {
                     .views(faq.getViews())
                     .approvals(faq.getApprovals())
                     .solution(solution)
-                    .solutionDesc(solution == null ? "未解决" : "已解决")
+                    .solutionDesc(solution == null ? "not solve" : "solved")
                     .build();
         }).collect(Collectors.toList());
     }

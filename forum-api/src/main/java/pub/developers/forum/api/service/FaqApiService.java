@@ -10,11 +10,6 @@ import pub.developers.forum.api.response.faq.FaqUserPageResponse;
 
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/1
- * @desc
- **/
 public interface FaqApiService {
 
     ResultModel<Long> saveFaq(FaqSaveFaqRequest request);

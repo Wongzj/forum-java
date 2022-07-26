@@ -10,11 +10,6 @@ import javax.annotation.Resource;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/24
- * @desc
- **/
 @Component
 public class FaqCreateListener extends EventBus.EventHandler<Faq> {
 

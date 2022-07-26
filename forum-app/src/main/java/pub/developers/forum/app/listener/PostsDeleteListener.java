@@ -8,11 +8,6 @@ import pub.developers.forum.domain.repository.ArticleTypeRepository;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/25
- * @desc
- **/
 @Component
 public class PostsDeleteListener extends EventBus.EventHandler<BasePosts> {
 
@@ -26,7 +21,6 @@ public class PostsDeleteListener extends EventBus.EventHandler<BasePosts> {
 
     @Override
     public void onMessage(BasePosts basePosts) {
-        // 文章类别引用数减
         if (PostsCategoryEn.ARTICLE.equals(basePosts.getCategory())) {
             articleTypeRepository.decreaseRefCount(basePosts.getTypeId());
         }

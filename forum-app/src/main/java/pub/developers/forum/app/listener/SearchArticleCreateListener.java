@@ -9,11 +9,6 @@ import pub.developers.forum.domain.service.SearchService;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/2
- * @desc
- **/
 @Component
 public class SearchArticleCreateListener extends EventBus.EventHandler<Article> {
 

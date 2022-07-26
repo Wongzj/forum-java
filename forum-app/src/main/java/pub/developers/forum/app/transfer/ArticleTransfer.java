@@ -22,11 +22,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
 public class ArticleTransfer {
 
     public static ArticleInfoResponse toArticleInfoResponse(Article article) {

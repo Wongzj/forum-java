@@ -10,11 +10,6 @@ import pub.developers.forum.domain.service.MessageService;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/4
- * @desc
- **/
 @Component
 public class NotifyAdminUserRegisterListener extends EventBus.EventHandler<User> {
 
@@ -29,20 +24,9 @@ public class NotifyAdminUserRegisterListener extends EventBus.EventHandler<User>
     @Override
     public void onMessage(User user) {
 
-        // 发送消息通知
         messageService.send(Message.builder()
                 .channel(MessageChannelEn.MAIL)
                 .type(MessageTypeEn.USER_REGISTER_NOTIFY_ADMIN)
-//                .sender(IdValue.builder()
-//                        .id()
-//                        .name()
-//                        .type(IdValueTypeEn.MAIL)
-//                        .build())
-//                .receiver(IdValue.builder()
-//                        .id()
-//                        .name()
-//                        .type(IdValueTypeEn.MAIL)
-//                        .build())
                 .title("")
                 .content("")
                 .build());

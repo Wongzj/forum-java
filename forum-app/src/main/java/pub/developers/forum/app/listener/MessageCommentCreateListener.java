@@ -15,11 +15,6 @@ import pub.developers.forum.domain.repository.PostsRepository;
 import javax.annotation.Resource;
 import java.util.Map;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/5
- * @desc
- **/
 @Component
 public class MessageCommentCreateListener extends EventBus.EventHandler<Map<String, Object>> {
 
@@ -47,10 +42,8 @@ public class MessageCommentCreateListener extends EventBus.EventHandler<Map<Stri
             return;
         }
 
-        // 通知帖子作者
         saveCommentMessage(basePosts.getCategory(), basePosts.getId(), basePosts.getAuthorId(), sender);
 
-        // 通知被回复人
         if (!ObjectUtils.isEmpty(comment.getReplyId())) {
             Comment reply = commentRepository.get(comment.getReplyId());
             if (!ObjectUtils.isEmpty(reply)) {
@@ -58,7 +51,6 @@ public class MessageCommentCreateListener extends EventBus.EventHandler<Map<Stri
             }
         }
 
-        // 通知评论人
         if (!ObjectUtils.isEmpty(comment.getReplyReplyId())) {
             Comment replyReply = commentRepository.get(comment.getReplyReplyId());
             if (!ObjectUtils.isEmpty(replyReply)) {

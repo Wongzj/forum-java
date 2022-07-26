@@ -8,11 +8,6 @@ import pub.developers.forum.domain.repository.OptLogRepository;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/22
- * @desc
- **/
 @Component
 public class OptLogUserRegisterListener extends EventBus.EventHandler<User> {
 
@@ -27,7 +22,6 @@ public class OptLogUserRegisterListener extends EventBus.EventHandler<User> {
     @Override
     public void onMessage(User user) {
 
-        // 保存操作记录
         optLogRepository.save(OptLog.createUserRegisterRecordLog(user.getId(), user));
     }
 }

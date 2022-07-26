@@ -12,11 +12,6 @@ import pub.developers.forum.domain.entity.Config;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/26
- * @desc
- **/
 public class ConfigTransfer {
 
     public static Config toConfig(ConfigPageRequest request) {

@@ -12,11 +12,6 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/11/19
- * @desc
- **/
 @Component
 public class FoodUserFollowListener extends EventBus.EventHandler<Pair<Long>> {
 

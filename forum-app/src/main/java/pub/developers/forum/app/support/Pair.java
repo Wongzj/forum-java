@@ -7,11 +7,6 @@ import pub.developers.forum.domain.entity.Tag;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/4
- * @desc
- **/
 @Data
 public class Pair<T> {
 

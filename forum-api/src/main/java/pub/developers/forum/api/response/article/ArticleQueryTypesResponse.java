@@ -8,11 +8,6 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/10/31
- * @desc
- **/
 @Data
 @Builder
 @AllArgsConstructor
@@ -25,34 +20,16 @@ public class ArticleQueryTypesResponse implements Serializable {
 
     private Long refCount;
 
-    /**
-     * 描述
-     */
     private String description;
 
-    /**
-     * 作用域
-     */
     private String scope;
 
-    /**
-     * 创建人
-     */
     private Long creatorId;
 
-    /**
-     * 审核状态
-     */
     private String auditState;
 
-    /**
-     * 创建时间
-     */
     private String createAt;
 
-    /**
-     * 更新时间
-     */
     private String updateAt;
 
 

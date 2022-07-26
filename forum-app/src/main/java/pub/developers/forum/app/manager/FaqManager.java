@@ -36,11 +36,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/1
- * @desc
- **/
 @Component
 public class FaqManager extends AbstractPostsManager {
 
@@ -53,30 +48,23 @@ public class FaqManager extends AbstractPostsManager {
     @IsLogin
     @Transactional
     public Long saveFaq(FaqSaveFaqRequest request) {
-        // 创建
         if (ObjectUtils.isEmpty(request.getId())) {
-            // 校验标签
             Set<Tag> selectTags = checkTags(request.getTagIds());
 
             Faq faq = FaqTransfer.toFaq(request, selectTags, false);
             faqRepository.save(faq);
 
-            // 触发创建事件
             EventBus.emit(EventBus.Topic.FAQ_CREATE, faq);
 
             return faq.getId();
         }
 
-        // 更新
-        // 校验问答
         Faq faq = faqRepository.get(request.getId());
         CheckUtil.isEmpty(faq, ErrorCodeEn.FAQ_NOT_EXIST);
         CheckUtil.isFalse(LoginUserContext.getUser().getId().equals(faq.getAuthor().getId()), ErrorCodeEn.FAQ_NOT_EXIST);
 
-        // 校验标签
         Set<Tag> selectTags = checkTags(request.getTagIds());
 
-        // 删除旧标签关联关系
         tagRepository.deletePostsMapping(request.getId());
 
         Faq oldFaq = faq.copy();
@@ -84,7 +72,6 @@ public class FaqManager extends AbstractPostsManager {
 
         faqRepository.update(newFaq);
 
-        // 触发更新事件
         EventBus.emit(EventBus.Topic.FAQ_UPDATE, Pair.build(oldFaq, newFaq));
 
         return request.getId();
@@ -158,7 +145,6 @@ public class FaqManager extends AbstractPostsManager {
             CheckUtil.isFalse(user.getId().equals(faq.getAuthor().getId()), ErrorCodeEn.FAQ_IN_AUDIT_PROCESS);
         }
 
-        // 触发查看详情事件
         EventBus.emit(EventBus.Topic.POSTS_INFO, faq);
 
         return FaqTransfer.toFaqInfoResponse(faq);

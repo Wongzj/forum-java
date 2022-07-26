@@ -12,11 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/20
- * @desc
- **/
 public class PostsTransfer {
 
     public static List<PostsVO> toPostsVOs(List<Posts> postsList, List<Comment> comments) {

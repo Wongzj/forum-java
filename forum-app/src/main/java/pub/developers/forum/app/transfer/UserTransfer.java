@@ -23,11 +23,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/9/8
- * @desc
- **/
 public class UserTransfer {
 
     public static List<UserOptLogPageResponse> toUserOptLogPageResponses(List<OptLog> optLogs, List<User> userList) {

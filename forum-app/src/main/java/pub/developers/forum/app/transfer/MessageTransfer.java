@@ -10,11 +10,6 @@ import pub.developers.forum.domain.entity.User;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/5
- * @desc
- **/
 public class MessageTransfer {
 
     public static List<MessagePageResponse> toMessagePageResponses(List<Message> messages, List<User> users, List<BasePosts> postsList, User loginUser) {
@@ -48,7 +43,7 @@ public class MessageTransfer {
                 });
             }
             if (MessageTypeEn.FOLLOW_USER.equals(message.getType())) {
-                messagePageResponse.setTitle("关注了你");
+                messagePageResponse.setTitle("followed you");
                 messagePageResponse.setInfoId(loginUser.getId().toString());
             }
 

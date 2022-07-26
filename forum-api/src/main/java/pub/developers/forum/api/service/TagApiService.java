@@ -13,11 +13,6 @@ import pub.developers.forum.api.vo.PostsVO;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Qiangqiang.Bian
- * @create 20/7/30
- * @desc
- **/
 public interface TagApiService {
 
     ResultModel<List<TagQueryResponse>> queryAllRef();

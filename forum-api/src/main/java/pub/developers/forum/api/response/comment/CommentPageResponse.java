@@ -9,11 +9,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/6
- * @desc
- **/
 @Data
 @Builder
 @AllArgsConstructor
@@ -28,13 +23,10 @@ public class CommentPageResponse implements Serializable {
 
     private Long replyId;
 
-    /**评论人*/
     private Commentator commentator;
 
-    /**被回复人*/
     private Commentator respondent;
 
-    /**回复列表*/
     private List<CommentPageResponse> replies;
 
     @Data

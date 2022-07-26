@@ -34,32 +34,19 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/9/8
- * @desc
- **/
 @Component
 public class UserManager extends AbstractLoginManager {
 
     @Resource
     private OptLogRepository optLogRepository;
 
-    /**
-     * 邮箱 + 密码 登录
-     * @param request
-     * @return
-     */
     public String emailRequestLogin(UserEmailLoginRequest request) {
-        // 判断邮箱是否存在
         User user = userRepository.getByEmail(request.getEmail());
         CheckUtil.isEmpty(user, ErrorCodeEn.USER_NOT_EXIST);
         CheckUtil.isTrue(UserStateEn.DISABLE.equals(user.getState()), ErrorCodeEn.USER_STATE_IS_DISABLE);
 
-        // 判断登录密码是否正确
         CheckUtil.isFalse(StringUtil.md5UserPassword(request.getPassword()).equals(user.getPassword()), ErrorCodeEn.USER_LOGIN_PWD_ERROR);
 
-        // 更新最后登录时间
         user.setLastLoginTime(new Date());
         userRepository.update(user);
 
@@ -97,7 +84,6 @@ public class UserManager extends AbstractLoginManager {
         user.setState(UserStateEn.DISABLE);
         userRepository.update(user);
 
-        // 删除用户登录信息
         deleteLoginUser(uid);
     }
 
@@ -121,11 +107,6 @@ public class UserManager extends AbstractLoginManager {
         EventBus.emit(EventBus.Topic.USER_CANCEL_FOLLOW, follow);
     }
 
-    /**
-     * 获取 token 对应用户详情
-     * @param token
-     * @return
-     */
     public UserInfoResponse info(String token) {
         String cacheUserStr = cacheService.get(CacheBizTypeEn.USER_LOGIN_TOKEN, token);
         CheckUtil.isEmpty(cacheUserStr, ErrorCodeEn.USER_TOKEN_INVALID);
@@ -140,45 +121,29 @@ public class UserManager extends AbstractLoginManager {
         return UserTransfer.toUserInfoResponse(user);
     }
 
-    /**
-     * 用户注册
-     * @param request
-     */
     @Transactional
     public String register(UserRegisterRequest request) {
-        // 判断邮箱是否已经被注册
         User user = userRepository.getByEmail(request.getEmail());
         CheckUtil.isNotEmpty(user, ErrorCodeEn.USER_REGISTER_EMAIL_IS_EXIST);
 
         User registerUser = UserTransfer.toUser(request);
 
-        // 保存注册用户
         userRepository.save(registerUser);
 
-        // 触发保存操作日志事件
         EventBus.emit(EventBus.Topic.USER_REGISTER, registerUser);
 
         return login(registerUser, request);
     }
 
-    /**
-     * 登出
-     * @param request
-     */
     public void logout(UserTokenLogoutRequest request) {
         User user = delCacheLoginUser(request.getToken());
         if (ObjectUtils.isEmpty(user)) {
             return;
         }
 
-        // 触发保存操作日志事件
         EventBus.emit(EventBus.Topic.USER_LOGOUT, OptLog.createUserLogoutRecordLog(user.getId(), JSON.toJSONString(request)));
     }
 
-    /**
-     * 用户更新基本信息
-     * @param request
-     */
     @IsLogin
     @Transactional
     public void updateInfo(UserUpdateInfoRequest request) {
@@ -191,34 +156,20 @@ public class UserManager extends AbstractLoginManager {
 
         User updateUser = UserTransfer.toUser(loginUser, request);
 
-        // 更新缓存中登录用户信息
         updateCacheUser(updateUser);
         userRepository.update(updateUser);
     }
 
-
-    /**
-     * 用户更新头像
-     * @param request
-     */
     @IsLogin
     @Transactional
     public void updateHeadimg(String linkFilenameData) {
         User loginUser = LoginUserContext.getUser();
 
-       /* User user = userRepository.getByEmail(request.getEmail());
-        if (!ObjectUtils.isEmpty(user)) {
-            CheckUtil.isFalse(user.getId().equals(loginUser.getId()), ErrorCodeEn.USER_REGISTER_EMAIL_IS_EXIST);
-        }*/
         loginUser.setAvatar(linkFilenameData);
-        // 更新缓存中登录用户信息
         updateCacheUser(loginUser);
         userRepository.update(loginUser);
     }
-    /**
-     * 更新登录密码
-     * @param request
-     */
+
     @IsLogin
     @Transactional
     public void updatePwd(UserUpdatePwdRequest request) {
@@ -227,7 +178,6 @@ public class UserManager extends AbstractLoginManager {
 
         user.setPassword(StringUtil.md5UserPassword(request.getNewPassword()));
 
-        // 更新缓存中登录用户信息
         updateCacheUser(user);
         userRepository.update(user);
     }

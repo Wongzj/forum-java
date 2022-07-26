@@ -7,11 +7,6 @@ import pub.developers.forum.domain.service.SearchService;
 
 import javax.annotation.Resource;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/12/3
- * @desc
- **/
 @Component
 public class SearchPostsDeleteListener extends EventBus.EventHandler<BasePosts> {
 

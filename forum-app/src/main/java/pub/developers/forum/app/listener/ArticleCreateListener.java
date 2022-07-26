@@ -11,11 +11,6 @@ import javax.annotation.Resource;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Qiangqiang.Bian
- * @create 2020/11/4
- * @desc
- **/
 @Component
 public class ArticleCreateListener extends EventBus.EventHandler<Article> {
 
